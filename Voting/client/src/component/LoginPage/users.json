@@ -1,0 +1,12 @@
+[
+  {
+    "email": "rootadmin@voting.com",
+    "password": "$2a$10$VhNk2.Yb3Oz8Ib.SmFZhCu61kxd7ZMV3JxetQkk1eEPJepK1qSXjS",
+    "page": "/AddCandidate"
+  },
+  {
+    "email": "user@voting.com",
+    "password": "$2a$10$VhNk2.Yb3Oz8Ib.SmFZhCu61kxd7ZMV3JxetQkk1eEPJepK1qSXjS",
+    "page": "/user"
+  }
+]
