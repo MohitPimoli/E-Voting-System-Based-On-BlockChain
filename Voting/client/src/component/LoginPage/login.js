@@ -9,10 +9,10 @@ export default function LoginPage() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     const user = users.find(user => user.email === email);
     if (user && bcrypt.compareSync(password, user.password)) {
       history.push(user.page); // Redirect to the user page
@@ -21,7 +21,7 @@ export default function LoginPage() {
       alert("Login failed. Please check your email and password.");
     }
   };
-  
+
   return (
     <div className="login-page">
       <h1>Login</h1>
@@ -47,7 +47,7 @@ export default function LoginPage() {
         <button type="submit">Login</button>
       </form>
       <p>
-        Don't have an account? <Link to="/Registration">Register here</Link>
+        Don't have an account? <Link to="/NewUser/NewReg">Register here</Link>
       </p>
     </div>
   );

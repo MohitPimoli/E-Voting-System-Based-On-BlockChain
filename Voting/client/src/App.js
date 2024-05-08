@@ -12,6 +12,7 @@ import Verification from "./component/Admin/Verification/Verification";
 import test from "./component/test";
 // import StartEnd from "./component/Admin/StartEnd/StartEnd";
 import "./App.css";
+import RegistrationForm from "./component/NewUser/NewReg";
 
 export default class App extends Component {
   render() {
@@ -21,6 +22,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={LoginPage} />
             <Route exact path="/user" component={UserHome} />
+            <Route exact path="/NewUser/NewReg" component={RegistrationForm} />
             <Route exact path="/admin" component={Home} />
             <Route exact path="/AddCandidate" component={AddCandidate} />
             <Route exact path="/Voting" component={Voting} />
@@ -29,6 +31,7 @@ export default class App extends Component {
             <Route exact path="/Verification" component={Verification} />
             <Route exact path="/test" component={test} />
             <Route exact path="*" component={NotFound} />
+
           </Switch>
         </Router>
       </div>
