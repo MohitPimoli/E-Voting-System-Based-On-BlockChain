@@ -1,24 +1,34 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
-import bcrypt from 'bcryptjs';
+import React, { useState } from 'react';
+import { useHistory, Link } from 'react-router-dom';
+import axios from 'axios';
 import './LoginPage.css';
-import users from './users.json';
 
-export default function LoginPage() {
+function LoginPage() {
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
-    const user = users.find(user => user.email === email);
-    if (user && bcrypt.compareSync(password, user.password)) {
-      history.push(user.page); // Redirect to the user page
-    } else {
-      // Handle login failure
-      alert("Login failed. Please check your email and password.");
+    try {
+      const response = await axios.post('http://127.0.0.1:5001/login', {
+        email,
+        password
+      });
+      if (response.status === 200) {
+        if (response.data.message === "Login successful") {
+          history.push('/');
+        } else if (response.data.message === "Invalid email or password") {
+          alert("Invalid email or password. Please check your email and password.");
+        } else {
+          alert("An error occurred while logging in.");
+        }
+      } else {
+        alert("An error occurred while logging in. Please check your network connection.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while logging in. Please try again.");
     }
   };
 
@@ -47,8 +57,12 @@ export default function LoginPage() {
         <button type="submit">Login</button>
       </form>
       <p>
-        Don't have an account? <Link to="/NewUser/NewReg">Register here</Link>
+        Don't have an account?{" "}
+        <Link to="/Signup" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+          Register here
+        </Link>
       </p>
     </div>
   );
 }
+export default LoginPage;

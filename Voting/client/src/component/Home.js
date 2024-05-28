@@ -74,9 +74,9 @@ export default class Home extends Component {
 
       // Getting election details from the contract
       const electionDetails = await this.state.ElectionInstance.methods
-      .getElectionDetails()
-      .call();
-      
+        .getElectionDetails()
+        .call();
+
       this.setState({
         elDetails: {
           adminName: electionDetails.adminName,
