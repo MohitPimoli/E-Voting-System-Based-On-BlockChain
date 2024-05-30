@@ -42,19 +42,21 @@ app.post('/register', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const { Email, Password } = req.body;
-    User.findOne({ Email })
+    const { officialEmail, password } = req.body;
+    User.findOne({ officialEmail: officialEmail })
         .then(user => {
             if (!user) {
                 res.status(401).send({ message: 'Invalid email or password' });
                 return;
             }
-            const isPasswordValid = bcrypt.compareSync(Password, user.password);
+            const isPasswordValid = bcrypt.compareSync(password, user.password);
             if (!isPasswordValid) {
                 res.status(401).send({ message: 'Invalid email or password' });
+                console.log('failed to login');
                 return;
             }
-            res.send({ message: 'Login successful' });
+            res.status(200).send({ message: 'Login successful' });
+            console.log('Login Successful');
         })
         .catch(err => {
             res.status(500).send({ message: 'Error logging in' });

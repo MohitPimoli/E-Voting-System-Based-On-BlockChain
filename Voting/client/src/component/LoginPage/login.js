@@ -5,19 +5,20 @@ import './LoginPage.css';
 
 function LoginPage() {
   const history = useHistory();
-  const [email, setEmail] = useState('');
+  const [officialEmail, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const response = await axios.post('http://127.0.0.1:5001/login', {
-        email,
+        officialEmail,
         password
       });
       if (response.status === 200) {
         if (response.data.message === "Login successful") {
-          history.push('/');
+          alert("Login successful");
+          history.push('/Home');
         } else if (response.data.message === "Invalid email or password") {
           alert("Invalid email or password. Please check your email and password.");
         } else {
@@ -36,12 +37,12 @@ function LoginPage() {
     <div className="login-page">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="officialEmail">Email:</label>
         <input
-          type="email"
-          id="email"
-          name="email"
-          value={email}
+          type="officialEmail"
+          id="officialEmail"
+          name="officialEmail"
+          value={officialEmail}
           onChange={(event) => setEmail(event.target.value)}
         />
         <br />
