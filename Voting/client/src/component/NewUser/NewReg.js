@@ -35,43 +35,56 @@ function Signup() {
       });
   };
 
+  const handleLoginRedirect = () => {
+    history.push('/');  // redirect to login page
+  };
+
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label>
-        Official Email:
-        <input type="email" name="officialEmail" onChange={handleInputChange} />
-      </label>
-      <label>
-        Student ID:
-        <input type="text" name="studentID" onChange={handleInputChange} />
-      </label>
-      <label>
-        Name:
-        <input type="text" name="name" onChange={handleInputChange} />
-      </label>
-      <label>
-        Course:
-        <input type="text" name="course" onChange={handleInputChange} />
-      </label>
-      <label>
-        University Rollno:
-        <input type="text" name="universityRollno" onChange={handleInputChange} />
-      </label>
-      <label>
-        New Password:
-        <input type="password" name="newPassword" onChange={handleInputChange} />
-      </label>
-      <label>
-        Confirm new Password:
-        <input
-          type="password"
-          name="confirmPassword"
-          value={confirmPassword}
-          onChange={handleConfirmPasswordChange}
-        />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+    <div className="signup-container">
+      <h1 id="signup">SignUp</h1>
+      <form onSubmit={handleFormSubmit}>
+        <label>
+          Official Email:
+          <input type="email" name="officialEmail" onChange={handleInputChange} />
+        </label>
+        <label>
+          Student ID:
+          <input type="text" name="studentID" onChange={handleInputChange} />
+        </label>
+        <label>
+          Name:
+          <input type="text" name="name" onChange={handleInputChange} />
+        </label>
+        <label>
+          Course:
+          <input type="text" name="course" onChange={handleInputChange} />
+        </label>
+        <label>
+          University Rollno:
+          <input type="text" name="universityRollno" onChange={handleInputChange} />
+        </label>
+        <label>
+          New Password:
+          <input type="password" name="newPassword" onChange={handleInputChange} />
+        </label>
+        <label>
+          Confirm new Password:
+          <input
+            type="password"
+            name="confirmPassword"
+            value={confirmPassword}
+            onChange={handleConfirmPasswordChange}
+          />
+        </label>
+        <button type="submit">Register</button>
+      </form>
+      <p>
+        Already registered?
+        <button type="back" onClick={handleLoginRedirect}>
+          Login
+        </button>
+      </p>
+    </div>
   );
 }
 

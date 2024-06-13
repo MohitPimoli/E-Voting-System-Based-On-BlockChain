@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import LoginPage from "./component/LoginPage/login";
 import Signup from "./component/NewUser/NewReg";
@@ -11,12 +11,7 @@ import Registration from "./component/Registration/Registration";
 import AddCandidate from "./component/Admin/AddCandidate/AddCandidate";
 import Verification from "./component/Admin/Verification/Verification";
 import test from "./component/test";
-
 // import StartEnd from "./component/Admin/StartEnd/StartEnd";
-
-
-
-
 export default class App extends Component {
   render() {
     return (

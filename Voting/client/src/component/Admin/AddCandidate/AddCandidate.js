@@ -6,7 +6,7 @@ import NavbarAdmin from "../../Navbar/NavigationAdmin";
 import getWeb3 from "../../../getWeb3";
 import Election from "../../../contracts/Election.json";
 
-import AdminOnly from "../../../component/AdminOnly";
+import AdminOnly from "../../AdminOnly";
 
 import "./AddCandidate.css";
 

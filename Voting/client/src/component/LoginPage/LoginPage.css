@@ -1,10 +1,14 @@
 .login-page {
   display: flex;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #555;
+  background-color: #fff;
+  border: 1px solid #010101;
+  border-radius: 10px;
 }
 
 .login-page h1 {
@@ -17,6 +21,7 @@
   flex-direction: column;
   width: 300px;
   margin-bottom: 1rem;
+  border: #010101;
 }
 
 .login-page label {
@@ -28,12 +33,12 @@
   margin-bottom: 1rem;
   padding: 0.5rem;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border: 1px solid #010101;
 }
 
 .login-page button {
   padding: 0.5rem;
-  color: #fff;
+  color: #ff7a28;
   background-color: #007bff;
   border: none;
   border-radius: 4px;
@@ -45,5 +50,8 @@
 }
 
 .login-page a {
-  color: #007bff;
+  color: #ff7700;
+}
+#login {
+  color: #ff7a28;
 }
