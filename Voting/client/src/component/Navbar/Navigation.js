@@ -7,7 +7,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav>
-      <NavLink to="/" className="header">
+      <NavLink to="/Home" className="header">
         <i className="fab fa-hive"></i> Home
       </NavLink>
       <ul
