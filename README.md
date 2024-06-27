@@ -26,6 +26,7 @@ A brief explanation on the basic workflow of the application.
 - [Truffle](https://www.trufflesuite.com/truffle).
 - [Ganache](https://github.com/trufflesuite/ganache-cli) (Cli).
 - [Metamask](https://metamask.io/) (Browser Extension).
+- [MongoDB](https://www.mongodb.com/try/download/community).
 - Two Different web browser.
 
 #### Getting the requirements
@@ -88,7 +89,12 @@ A brief explanation on the basic workflow of the application.
    ```
 
    > Note: Use `truffle migrate --reset` for re-deployments.
-7. Open project in VScode and start backend, type in the terminal.
+7. Start MongoDB Compass.
+   > New connection >> Connect >> Create database
+   - Database Name `voting`
+   - Collection Name `users`
+      
+8. Open project in VScode and start backend, type in the terminal.
    ```bash
    cd Backend
    npm install
@@ -96,7 +102,7 @@ A brief explanation on the basic workflow of the application.
    ```
    - if it shows the output `Server is running on port 5001`. You are good to go. If not, then
      there is a problem in `npm install`.
-8. Launch the development server (frontend). In 2nd terminal. 
+9. Launch the development server (frontend). In 2nd terminal. 
 
    ```shell
    cd client
