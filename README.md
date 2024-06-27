@@ -72,22 +72,22 @@ A brief explanation on the basic workflow of the application.
    - New RPC URL: `http://127.0.0.1:8545`
    - Chain ID: `1337`
 
-5. Import account(s) using private keys from ganache-cli to the metamask extension on the browser
+5. Import account(s) using private keys from ganache-cli to the metamask extension on the browser.
 
    ![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/a7d01909-a68b-4f96-ba86-73800ef0a2eb)
 
-Add account or hardware wallet >> import account >> Enter private key string
+- Add account or hardware wallet >> import account >> Enter private key string.
 
-   ![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/f30b18b4-95a6-4623-bee1-e925229668fd)
+    ![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/f30b18b4-95a6-4623-bee1-e925229668fd)
 
    - NOTE:- Use 1st private key for admin account and other keys for normal user. And you need to setup admin account in one browser and user account in another browser.
-6. Deploy smart contract to the (local) blockchain network (i.e ganache-cli). open 2nd terminal
+6. Deploy smart contract to the (local) blockchain network (i.e ganache-cli). open 2nd terminal.
    ```shell
    cd Voting
    truffle migrate
    ```
 
-   > Note: Use `truffle migrate --reset` for re-deployments
+   > Note: Use `truffle migrate --reset` for re-deployments.
 7. Open project in VScode and start backend, type in the terminal.
    ```bash
    cd Backend
@@ -104,7 +104,7 @@ Add account or hardware wallet >> import account >> Enter private key string
    npm start
    ```
 
-   > If you encounter **error** during `npm install`, please note that you might need to install Microsoft Visual C++ Redistributable packages from [learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) (here is the direct download link for X64: [aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe))
+   > If you encounter **error** during `npm install`, please note that you might need to install Microsoft Visual C++ Redistributable packages from [learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) (here is the direct download link for X64: [aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)).
 
 ## To-Do List
 
