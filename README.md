@@ -69,10 +69,10 @@ A brief explanation on the basic workflow of the application.
    ![Screenshot 2024-06-27 084254](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/e1b98cc1-d12a-4444-b420-a96bba51a845)
 
    Select a Network >> Add Network >> Add a Network Manually
-   New RPC URL: `http://127.0.0.1:8545`
-   Chain ID: `1337`
+   - New RPC URL: `http://127.0.0.1:8545`
+   - Chain ID: `1337`
 
-4. Import account(s) using private keys from ganache-cli to the metamask extension on the browser
+5. Import account(s) using private keys from ganache-cli to the metamask extension on the browser
 
 ![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/a7d01909-a68b-4f96-ba86-73800ef0a2eb)
 
@@ -84,8 +84,6 @@ Add account or hardware wallet >> import account >> Enter private key string
 5. Deploy smart contract to the (local) blockchain network (i.e ganache-cli). open 2nd terminal
   ```shell
   cd Voting
-  ```
-  ```shell
   truffle migrate
   ```
 
