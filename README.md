@@ -82,10 +82,10 @@ Add account or hardware wallet >> import account >> Enter private key string
 
 - NOTE:- Use 1st private key for admin account and other keys for normal user. And you need to setup admin account in one browser and user account in another browser.
 5. Deploy smart contract to the (local) blockchain network (i.e ganache-cli). open 2nd terminal
-  ```shell
-  cd Voting
-  truffle migrate
-  ```
+   ```shell
+   cd Voting
+   truffle migrate
+   ```
 
    > Note: Use `truffle migrate --reset` for re-deployments
 6. Open project in VScode and start backend, type in the terminal.
