@@ -55,7 +55,7 @@ A brief explanation on the basic workflow of the application.
    your:\path\to\E-Voting-System-Based-On-BlockChain\
    ```
    
-3.  Run local Ethereum blockchain on the terminal
+3. Run local Ethereum blockchain on the terminal
 
    ```shell
    ganache-cli
@@ -63,7 +63,7 @@ A brief explanation on the basic workflow of the application.
 
    > Note: Do not close `ganache-cli` (the blockchain network needs to be running all the time)
 
-3. Configure metamask on the browser with the following details
+4. Configure metamask on the browser with the following details
    You need to add new network.
    
    ![Screenshot 2024-06-27 084254](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/e1b98cc1-d12a-4444-b420-a96bba51a845)
@@ -81,14 +81,14 @@ Add account or hardware wallet >> import account >> Enter private key string
 ![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/f30b18b4-95a6-4623-bee1-e925229668fd)
 
 - NOTE:- Use 1st private key for admin account and other keys for normal user. And you need to setup admin account in one browser and user account in another browser.
-5. Deploy smart contract to the (local) blockchain network (i.e ganache-cli). open 2nd terminal
+6. Deploy smart contract to the (local) blockchain network (i.e ganache-cli). open 2nd terminal
    ```shell
    cd Voting
    truffle migrate
    ```
 
    > Note: Use `truffle migrate --reset` for re-deployments
-6. Open project in VScode and start backend, type in the terminal.
+7. Open project in VScode and start backend, type in the terminal.
    ```bash
    cd Backend
    npm install
@@ -96,7 +96,7 @@ Add account or hardware wallet >> import account >> Enter private key string
    ```
    - if it shows the output `Server is running on port 5001`. You are good to go. If not, then
      there is a problem in `npm install`.
-7. Launch the development server (frontend). In 2nd terminal. 
+8. Launch the development server (frontend). In 2nd terminal. 
 
    ```shell
    cd client
