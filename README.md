@@ -74,13 +74,13 @@ A brief explanation on the basic workflow of the application.
 
 5. Import account(s) using private keys from ganache-cli to the metamask extension on the browser
 
-![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/a7d01909-a68b-4f96-ba86-73800ef0a2eb)
+   ![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/a7d01909-a68b-4f96-ba86-73800ef0a2eb)
 
 Add account or hardware wallet >> import account >> Enter private key string
 
-![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/f30b18b4-95a6-4623-bee1-e925229668fd)
+   ![image](https://github.com/MohitPimoli/E-Voting-System-Based-On-BlockChain/assets/114788978/f30b18b4-95a6-4623-bee1-e925229668fd)
 
-- NOTE:- Use 1st private key for admin account and other keys for normal user. And you need to setup admin account in one browser and user account in another browser.
+   - NOTE:- Use 1st private key for admin account and other keys for normal user. And you need to setup admin account in one browser and user account in another browser.
 6. Deploy smart contract to the (local) blockchain network (i.e ganache-cli). open 2nd terminal
    ```shell
    cd Voting
